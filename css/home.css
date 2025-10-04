@@ -1,0 +1,40 @@
+.home {
+    background-color: var(--black);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    color: var(--white);
+}
+
+.home-content {
+    width: 85%;
+    padding-bottom: 50px;
+}
+
+.home h1 {
+    font-size: 120pt;
+    line-height: 140px;
+    margin-top: 20px;
+}
+
+.home span {
+    font-size: 28pt;
+}
+
+@media only screen and (max-width: 900px) {
+    .home-content {
+        width: 90%;
+    }
+
+    .home h1 {
+        font-size: 45pt;
+        line-height: 60px;
+        margin-top: 5px;
+    }
+
+    .home span {
+        font-size: 15pt;
+    }
+}

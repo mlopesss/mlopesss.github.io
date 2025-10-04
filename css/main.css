@@ -1,0 +1,101 @@
+:root {
+    /* Website color palette */
+
+    --black: #0d0d0d;
+    --white: #fff;
+    --gray: #1f1f1f;
+    --beige: #5B5F97;
+
+    /* Transition time */
+    --transition: 0.3s;
+    --cursor-dot-transition: 0.1s;
+    --navbar-transition: 0.7s;
+}
+
+@font-face {
+    font-family: 'Against';
+    src: url('../fonts/Against-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Inria Serif';
+    src: url('../fonts/InriaSerif-Light.ttf');
+}
+
+::-webkit-scrollbar {
+    background-color: var(--black);
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--white);
+}
+
+::selection {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+html {
+    background-color: var(--black);
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Against';
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+p,
+span,
+a {
+    font-family: 'Inria Serif';
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.cursor-dot {
+    background-color: var(--white);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 5;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+}
+
+mark {
+    background-color: var(--beige);
+    color: var(--white);
+}
+
+.nav-offset-overlay {
+    background-color: var(--black);
+    opacity: 0;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    transition: all var(--transition);
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+    .cursor-dot {
+        display: none;
+    }
+}
